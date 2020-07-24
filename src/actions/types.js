@@ -1,0 +1,4 @@
+export const ADD_NUMBER = 'ADD_NUMBER';
+export const SUBSTRACT_NUMBER = 'SUBSTRACT_NUMBER';
+
+
