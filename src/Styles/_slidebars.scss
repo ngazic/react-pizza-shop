@@ -204,11 +204,9 @@ html.sb-static .sb-slidebar {
     width: 45%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: $phone-max) {
     /* Slidebar widths on extra small screens. */
-    .sb-slidebar {
-        width: 70%;
-    }
+   
     .sb-width-thin {
         width: 55%;
     }
@@ -217,10 +215,10 @@ html.sb-static .sb-slidebar {
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: $tablet-min) {
     /* Slidebar widths on small screens. */
     .sb-slidebar {
-        width: 55%;
+        width: 100%;
     }
     .sb-width-thin {
         width: 40%;
@@ -230,7 +228,7 @@ html.sb-static .sb-slidebar {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-max) {
     /* Slidebar widths on medium screens. */
     .sb-slidebar {
         width: 370px;
@@ -243,7 +241,7 @@ html.sb-static .sb-slidebar {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $desktop-large-min) {
     /* Slidebar widths on large screens. */
     .sb-slidebar {
         width: 370px;
@@ -256,13 +254,19 @@ html.sb-static .sb-slidebar {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $desktop-large) {
     /* Slidebar widths on extra large screens. */
     .sb-width-thin {
         width: 5%;
     }
     .sb-width-wide {
         width: 35%;
+    }
+}
+@media (min-width: $desktop-large-max) {
+    /* Slidebar widths on extra large screens. */
+    .sb-slidebar {
+        left: calc(50vw - 960px);
     }
 }
 

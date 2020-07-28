@@ -1,6 +1,7 @@
 /*------------------------------------------------------------------
 [Table of contents]
 
+- Breakpoints
  - Imports
  - Global
  - Typography
@@ -15,16 +16,28 @@
 
 -------------------------------------------------------------------*/
 
+/* ======= BREAKPOINTS ======= */
+
+$phone-max: 480px;
+$tablet-min: ($phone-max+1);
+$tablet-max: 768px;
+$desktop-min: ($tablet-max+1);
+$desktop-max: 992px;
+$desktop-large-min: ($desktop-max+1);
+$desktop-large: 1200px;
+$desktop-large-max: 1900px;
 
 /* ======= IMPORTS ======= */
 
 @import './icons.scss';
 @import './slidebars.scss';
 
+
 /* ======= GLOBAL ======= */
 
 body {
     background: #333 url('../images/bg/pattern-body.jpg');
+
     p {
         margin-bottom: 30px;
         line-height: 1.66;
@@ -39,6 +52,7 @@ img {
     &.pull-right {
         padding-left: 20px;
     }
+
     &.pull-left {
         padding-right: 20px;
     }
@@ -60,6 +74,7 @@ img {
 .helper {
     display: inline-block;
     vertical-align: middle;
+
     &:before {
         display: inline-block;
         vertical-align: middle;
@@ -79,6 +94,7 @@ img {
 .blocks-inline {
     padding-left: 0;
     list-style-type: none;
+
     >li {
         display: inline-block;
         margin-right: -3px;
@@ -90,11 +106,13 @@ img {
     width: 100%;
     overflow-y: auto;
     _overflow: auto;
+
     &::-webkit-scrollbar {
         width: 14px;
         height: 14px;
         -webkit-appearance: none;
     }
+
     &::-webkit-scrollbar-thumb {
         border: 3px solid #fff;
         border-radius: 8px;
@@ -112,6 +130,7 @@ img {
         padding-left: 0;
         list-style-type: none;
     }
+
     ol {
         margin-top: 17px;
         margin-bottom: 17px;
@@ -119,9 +138,11 @@ img {
         list-style-type: none;
         margin-left: 30px;
         counter-reset: list;
+
         li {
             margin-bottom: 2px;
             text-indent: -16px;
+
             &:before {
                 display: inline-block;
                 width: 15px;
@@ -131,10 +152,12 @@ img {
             }
         }
     }
+
     ul>li {
         position: relative;
         margin-bottom: 1px;
         font-weight: 700;
+
         &:before {
             display: inline-block;
             width: 6px;
@@ -144,12 +167,15 @@ img {
             content: '';
         }
     }
+
     h3+ {
+
         ul,
         ol {
             margin-top: 45px;
         }
     }
+
     img {
         margin-bottom: 20px;
     }
@@ -157,6 +183,7 @@ img {
 
 .list_mod-a {
     margin-left: 44px;
+
     >li:before {
         border-radius: 50%;
     }
@@ -230,6 +257,7 @@ h3.h3-inner {
     border-style: solid;
     transition: all 0.3s;
     text-transform: uppercase;
+
     &:hover {
         color: inherit;
         text-decoration: none;
@@ -261,6 +289,7 @@ h3.h3-inner {
 .ui-btn_with_icon {
     padding-right: 30px;
     padding-left: 30px;
+
     .icon {
         margin-right: 10px;
         font-size: 18px;
@@ -269,6 +298,7 @@ h3.h3-inner {
 
 .group-btn-ui {
     margin-top: 20px;
+
     .ui-btn:last-child {
         margin-bottom: 0;
     }
@@ -333,6 +363,7 @@ h3.h3-inner {
     margin-right: 1px;
     overflow: hidden;
     z-index: 1;
+
     &:after {
         position: absolute;
         top: 50%;
@@ -345,6 +376,7 @@ h3.h3-inner {
         transition: all 0.5s ease 0.2s;
         transform: translateX(-50%) translateY(-50%) rotate(45deg);
     }
+
     &:hover:after {
         height: 580%;
         opacity: 1;
@@ -385,6 +417,7 @@ h3.h3-inner {
     .pagination {
         margin-bottom: 0;
     }
+
     h1,
     h2,
     h3,
@@ -402,6 +435,7 @@ h3.h3-inner {
     margin-bottom: 11px;
     padding-left: 45px;
     cursor: pointer;
+
     &:last-child {
         margin-right: 0;
     }
@@ -427,11 +461,13 @@ h3.h3-inner {
     margin-top: 0;
     margin-right: 12px;
     margin-bottom: 11px;
+
     &:before {
         top: 3px;
         width: 19px;
         height: 19px;
     }
+
     &:after {
         top: 9px;
         left: 6px;
@@ -447,12 +483,14 @@ h3.h3-inner {
 
 .forms__label-radio {
     margin-right: 19px;
+
     &:before {
         top: 2px;
         width: 18px;
         height: 18px;
         border-radius: 50%;
     }
+
     &:after {
         top: 8px;
         left: 6px;
@@ -468,7 +506,9 @@ h3.h3-inner {
     width: 0;
     height: 0;
     opacity: 0;
+
     &:checked+ {
+
         .forms__label-check:after,
         .forms__label-radio:after {
             display: block;
@@ -538,6 +578,7 @@ h3.h3-inner {
     height: 90px;
     background-color: #151515;
     text-align: center;
+
     .logo {
         display: inline-block;
         padding-top: 22px;
@@ -549,6 +590,7 @@ h3.h3-inner {
     width: 90px;
     height: 100%;
     cursor: pointer;
+
     .icon {
         display: block;
         padding-top: 26px;
@@ -585,6 +627,7 @@ h3.h3-inner {
     box-shadow: 0 0px 6px 0px #333;
     transition: all .3s;
     background-color: #000;
+
     &:hover {
         opacity: 1;
     }
@@ -606,6 +649,7 @@ h3.h3-inner {
     line-height: 1;
     border: none;
     background-color: transparent;
+
     &::-moz-placeholder,
     &::-webkit-input-placeholder {
         color: #fff;
@@ -618,6 +662,7 @@ h3.h3-inner {
     right: 13px;
     border: none;
     background-color: transparent;
+
     .icon {
         font-size: 14px;
     }
@@ -637,6 +682,7 @@ h3.h3-inner {
     color: #fefefe;
     text-transform: uppercase;
     font-size: 14px;
+
     &:hover {
         font-weight: 700;
         text-decoration: none;
@@ -650,6 +696,7 @@ h3.h3-inner {
     font-weight: 700;
     color: #fefefe;
     text-transform: uppercase;
+
     +.link-account {
         margin-top: 28px;
     }
@@ -688,6 +735,7 @@ h3.h3-inner {
     padding: 0 26px;
     font: 26px 'Fredericka the Great';
     color: #fff;
+
     &:hover {
         text-decoration: none;
     }
@@ -713,9 +761,11 @@ h3.h3-inner {
     border-top: 1px solid #383838;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 0 0 rgba(1, 2, 2, 0.55);
+
     .panel-heading {
         position: relative;
         padding-right: 100px;
+
         .btn-collapse {
             position: absolute;
             top: 30px;
@@ -723,6 +773,7 @@ h3.h3-inner {
             bottom: 0;
             display: block;
         }
+
         .icon {
             float: right;
             width: 70px;
@@ -734,6 +785,7 @@ h3.h3-inner {
             transition: all 0.3s;
             text-align: center;
         }
+
         .icon_small {
             display: block;
             width: 60px;
@@ -742,33 +794,41 @@ h3.h3-inner {
             font-size: 48px;
             background-size: cover;
         }
+
         .icon:hover {
             font-weight: 700;
         }
+
         .collapsed .btn-collapse {
             background-color: transparent;
         }
     }
+
     .btn-collapse {
         .icon:before {
             content: '-';
         }
+
         &.collapsed .icon:before {
             content: '+';
         }
     }
+
     .panel-title__number {
         display: inline-block;
         margin-right: 55px;
         font: 72px/1 'Fredericka the Great';
         vertical-align: middle;
     }
+
     .panel-img {
         margin-bottom: 15px;
+
         img {
             margin: 0 auto;
         }
     }
+
     .panel-body ul {
         margin-top: 30px;
     }
@@ -781,6 +841,7 @@ h3.h3-inner {
 
 .accordion_mod-a {
     margin-top: 75px;
+
     .panel {
         padding-bottom: 0;
     }
@@ -846,11 +907,14 @@ h3.h3-inner {
         border-color: #000;
         vertical-align: top;
     }
+
     .ui-btn {
         display: inline-block;
         padding: 10px 26px;
     }
+
     input {
+
         &::-webkit-input-placeholder,
         &::-moz-placeholder {
             color: #000;
@@ -868,9 +932,11 @@ h3.h3-inner {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 32px;
+
     &:before {
         top: 3px;
     }
+
     &:after {
         top: 9px;
     }
@@ -916,6 +982,7 @@ h3.h3-inner {
 .advantages__item {
     margin-top: 33px;
     margin-bottom: 20px;
+
     .icon {
         display: block;
         margin-bottom: 19px;
@@ -937,6 +1004,7 @@ h3.h3-inner {
     top: -26px;
     height: 30px;
     overflow: hidden;
+
     &:before,
     &:after {
         position: absolute;
@@ -946,10 +1014,12 @@ h3.h3-inner {
         border-top-style: solid;
         content: '';
     }
+
     &:before {
         left: 0;
         display: inline-block;
     }
+
     &:after {
         right: 0;
     }
@@ -985,6 +1055,7 @@ h3.h3-inner {
     border-bottom: 1px solid #383838;
     box-shadow: 0 1px 0 0 #010202;
     overflow: hidden;
+
     >.icon {
         position: absolute;
         top: 50%;
@@ -999,6 +1070,7 @@ h3.h3-inner {
 .list-cart__img {
     display: inline-block;
     vertical-align: top;
+
     img {
         display: inline-block;
         margin-left: 25px;
@@ -1053,17 +1125,21 @@ h3.h3-inner {
         margin-bottom: 40px;
         text-align: left;
     }
+
     .ui-title-inner {
         margin-top: 38px;
         margin-bottom: 26px;
     }
+
     .list_mod-b {
         margin-bottom: 40px;
         margin-top: 25px;
+
         li {
             margin-bottom: 5px;
         }
     }
+
     .ui-btn {
         margin-right: 6px;
     }
@@ -1082,9 +1158,11 @@ h3.h3-inner {
     font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
+
     &.collapsed {
         color: #fff;
     }
+
     .icon {
         margin-right: 10px;
     }
@@ -1151,9 +1229,11 @@ h3.h3-inner {
 
 .cart__link-prev {
     color: #fff;
+
     &:hover {
         text-decoration: none;
     }
+
     .icon {
         margin-right: 10px;
     }
@@ -1207,12 +1287,14 @@ h3.h3-inner {
     border: 1px solid #fff;
     cursor: pointer;
     text-align: center;
+
     &:hover {
         text-decoration: none;
     }
 }
 
 .cart__enumerator-input {
+
     &::-webkit-input-placeholder,
     &::-moz-placeholder {
         color: #fff;
@@ -1368,6 +1450,7 @@ h3.h3-inner {
     cursor: pointer;
     transition: all 0.3s;
     text-align: center;
+
     &:hover {
         text-decoration: none;
     }
@@ -1424,14 +1507,17 @@ h3.h3-inner {
 
 .pizza-builder__item_mod-a {
     padding-top: 12px;
+
     .pizza-builder__check-img {
         height: 107px;
     }
+
     &:hover,
     &:focus {
         outline-style: none;
         background-color: rgba(0, 0, 0, 0.3);
     }
+
     &:hover .pizza-builder__btn-select,
     &:focus .pizza-builder__btn-select,
     &:hover .bootstrap-select>.dropdown-toggle,
@@ -1441,6 +1527,7 @@ h3.h3-inner {
 }
 
 .pizza-builder__item_mod-b {
+
     &:hover .pizza-builder__btn-select,
     &:focus .pizza-builder__btn-select,
     &:hover .bootstrap-select>.dropdown-toggle,
@@ -1450,17 +1537,21 @@ h3.h3-inner {
 }
 
 .pizza-builder__item_mod-a {
+
     &:hover .pizza-builder__check-description_mod-a,
     &:focus .pizza-builder__check-description_mod-a {
         display: none;
     }
+
     &:hover .pizza-builder__check-price,
     &:focus .pizza-builder__check-price {
         margin-bottom: 23px;
     }
+
     .icon-check {
         top: 4px;
     }
+
     cursor: pointer;
 }
 
@@ -1474,31 +1565,38 @@ h3.h3-inner {
 
 .pizza-builder__item_mod-b {
     padding-top: 23px;
+
     .pizza-builder__check-img {
         height: 239px;
     }
+
     .pizza-builder__btn-select {
         display: inline-block;
         opacity: 0;
     }
+
     .pizza-builder__check-price {
         margin-bottom: 14px;
     }
+
     &:hover,
     &:focus {
         outline-style: none;
         background-color: rgba(21, 21, 21, 0.3);
     }
+
     .bootstrap-select>.dropdown-toggle {
         opacity: 0;
         transition: all .3s;
     }
+
     &:hover .bootstrap-select>.dropdown-toggle,
     &:focus .bootstrap-select>.dropdown-toggle,
     &:hover .pizza-builder__btn-select,
     &:focus .pizza-builder__btn-select {
         opacity: 1;
     }
+
     .pizza-builder__btn-select,
     .ui-select {
         margin-top: 10px;
@@ -1508,12 +1606,15 @@ h3.h3-inner {
 
 .pizza-builder__item_mod-c {
     margin-top: 15px;
+
     .pizza-builder__check-name {
         margin-top: 15px;
     }
+
     .pizza-builder__check-img {
         height: 258px;
     }
+
     .pizza-builder__check-price {
         margin-top: 30px;
     }
@@ -1527,6 +1628,7 @@ h3.h3-inner {
     font-size: 14px;
     color: #383838;
     cursor: pointer;
+
     &:hover {
         text-decoration: none;
     }
@@ -1559,33 +1661,40 @@ h3.h3-inner {
             padding-bottom: 25px;
             border-bottom: 1px solid #383838;
             box-shadow: 0 2px 0 0 rgba(1, 2, 2, 0.55);
+
             &:first-child {
                 width: 220px;
             }
         }
+
         tbody>tr {
             &:first-child>td {
                 padding-top: 22px;
             }
+
             >td:last-child {
                 padding-left: 10px;
             }
         }
     }
+
     tr>td {
         padding-top: 14px;
     }
+
     .icon-close {
         float: right;
         padding-top: 3px;
         cursor: pointer;
     }
+
     tr> {
         .table-order__total {
             padding-top: 23px;
             padding-bottom: 25px;
-            font: 24px "" Fredericka the Great "";
+            font: 24px ""Fredericka the Great "";
         }
+
         .table-order__base {
             padding-top: 20px;
             padding-bottom: 15px;
@@ -1612,6 +1721,7 @@ h3.h3-inner {
         font-size: 14px;
         text-transform: uppercase;
     }
+
     tbody>tr>td {
         padding-top: 25px;
         padding-bottom: 21px;
@@ -1663,6 +1773,7 @@ h3.h3-inner {
     &:first-child {
         padding-right: 15px;
     }
+
     padding-bottom: 20px;
 }
 
@@ -1696,10 +1807,12 @@ h3.h3-inner {
     padding-top: 32px;
     padding-bottom: 25px;
     background-color: rgba(0, 0, 0, 0.3);
+
     >.recipe__item {
         display: block;
         margin-bottom: 12px;
         padding-left: 45px;
+
         &:before {
             content: none;
         }
@@ -1713,6 +1826,7 @@ h3.h3-inner {
     height: 100%;
     padding-right: 35px;
     padding-left: 35px;
+
     &:before {
         position: absolute;
         top: 30px;
@@ -1892,6 +2006,7 @@ h3.h3-inner {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+
     .icon {
         margin-right: 5px;
         margin-left: 5px;
@@ -1910,9 +2025,11 @@ h3.h3-inner {
     &.owl-carousel .owl-item {
         padding-top: 30px;
     }
+
     &.owl-theme .owl-controls {
         top: auto;
         bottom: 0;
+
         .owl-buttons div {
             position: relative;
             right: auto;
@@ -1920,6 +2037,7 @@ h3.h3-inner {
             display: inline-block;
             margin-right: 14px;
             margin-left: 14px;
+
             &:hover {
                 color: #fff;
             }
@@ -1930,6 +2048,7 @@ h3.h3-inner {
 .slider_mod-c.owl-theme .owl-controls {
     top: auto;
     margin-top: 74px;
+
     .owl-buttons {
         position: relative;
         max-width: 1170px;
@@ -1940,13 +2059,16 @@ h3.h3-inner {
         border-top-style: solid;
         border-bottom-width: 4px;
         border-bottom-style: solid;
+
         div {
             z-index: 100;
         }
+
         .owl-prev {
             top: -4px;
             left: 0;
         }
+
         .owl-next {
             top: -4px;
             right: 0;
@@ -1956,11 +2078,13 @@ h3.h3-inner {
 
 .slider_mod-d.owl-theme .owl-controls {
     top: -51px;
+
     .owl-buttons {
         .owl-prev {
             right: 70px;
             left: auto;
         }
+
         .owl-next {
             right: 0;
         }
