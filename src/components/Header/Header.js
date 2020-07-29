@@ -32,7 +32,7 @@ export default class Header extends Component {
               : "pe-7s-close"}`} onClick={this.burgerBtn}></i>
         </span>
         <a className="logo" href="home.html">
-          <img className="img-responsive" src={logo} alt="Logo"/>
+          <img className="img-fluid" src={logo} alt="Logo"/>
         </a>
         <span className="header-basket sb-toggle-right">
           <i className="icon pe-7s-cart"></i>
