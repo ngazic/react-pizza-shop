@@ -1,5 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {setTitle} from "../../actions/pageActions";
+import {connect} from "react-redux"
+import store from '../../store';
 
 const pages = [
   {
@@ -17,14 +20,18 @@ const pages = [
   }
 ];
 
-export default function Navigation(props) {
-  return (<div class="sb-slidebar sb-left sb-active">
-    <nav class="main-nav">
-      <ul class="navig-menu list-unstyled">
+function Navigation(props) {
+  const setTitle = (title) => {
+    props.setTitle(title);
+    console.log(store.getState());
+  }
+  return (<div className="sb-slidebar sb-left sb-active">
+    <nav className="main-nav">
+      <ul className="navig-menu list-unstyled">
         {
           pages.map(item => {
-            return (<li className="navig-menu__item">
-              <Link key={item.page} onClick={props.closeNav} className="navig-menu__link" to={"/" + item.link}>
+            return (<li key={item.page} className="navig-menu__item">
+              <Link  onClick={() => {props.closeNav();setTitle(item.page);}} className="navig-menu__link" to={item.link} >
                 {item.page}
               </Link>
             </li>);
@@ -34,9 +41,15 @@ export default function Navigation(props) {
     </nav>
       <div className="border-bottom"></div>
       <li className="link-account">
-        <Link onClick={props.closeNav} className="navig-menu__link" to="/checkout">
+        <Link onClick={() => {props.closeNav();setTitle('Checkout');}} className="navig-menu__link" to="checkout">
           checkout
         </Link>
       </li>
   </div>);
 }
+
+const mapStateToProps = (state) =>({
+  Title: state
+ });
+
+export default connect(mapStateToProps, {setTitle})(Navigation);

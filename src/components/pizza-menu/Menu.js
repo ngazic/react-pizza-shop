@@ -3,10 +3,9 @@ import Item from './Item';
 
 export class Menu extends Component {
   render() {
-    return (<div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="pizza-builder__wrap-check">
+    return (<div className="container">
+      <div className="row">
+        <div className="col-12">
           <Item />
           <Item />
           <Item />
@@ -14,7 +13,6 @@ export class Menu extends Component {
           <Item />
           <Item />
           <Item />
-            </div>
 
          </div>
       </div>

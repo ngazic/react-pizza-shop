@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import logo from "../../images/logo.png";
 import Navigation from "./Navigation";
-import {Link} from 'react-router-dom'
+import {Link} from "react-router-dom";
 
 
 export default class Header extends Component {
@@ -30,9 +30,9 @@ export default class Header extends Component {
           <i className={`icon   ${
             !this.state.showNavigation
               ? "pe-7s-menu"
-              : "pe-7s-close"}`} onClick={this.burgerBtn}></i>
+              : "pe-7s-close"}`} onClick={this.burgerBtn} ></i>
         </span>
-        <Link to='/'>
+        <Link className="logo" to='/'>
           <img className="img-responsive" src={logo} alt="Logo"/>
         </Link>
         <span className="header-basket sb-toggle-right">

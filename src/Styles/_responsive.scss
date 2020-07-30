@@ -221,6 +221,9 @@
 /*480 x 640 (small tablet and iPhone)*/
 
 @media (max-width: 767px) {
+  .sb-slidebar {
+    width: 100%;
+}
   .main-slider__title {
     font-size: 7vw;
   }
@@ -319,10 +322,6 @@
 
   .pizza-builder__item_mod-b .pizza-builder__check-img {
     height: auto;
-  }
-
-  .pizza-builder__wrap-check {
-    text-align: center;
   }
 
   .table-container {
@@ -440,9 +439,6 @@
 /*320 x 480 (iPhone)*/
 
 @media (max-width: 480px) {
-  .header .logo {
-    max-width: 30%;
-  }
 
   .slider-type-a__item {
     padding-left: 50px;

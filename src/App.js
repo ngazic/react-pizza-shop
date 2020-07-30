@@ -1,14 +1,20 @@
 import React from "react";
 import Home from "./components/Home";
+import Hero from "./components/Hero";
 import About from "./components/About";
 import Header from "./components/header/Header";
 import Menu from "./components/pizza-menu/Menu";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { Provider } from "react-redux";
+import store from  "./store";
 
 function App() {
-  return (<BrowserRouter>
+  return (
+    <Provider store={store}>
+  <BrowserRouter>
     <div className="App layout-theme animated-css" id="wrapper">
       <Header />
+      <Hero />
       <Switch>
         <Route exact path="/">
           <Home/>
@@ -21,7 +27,8 @@ function App() {
         </Route>
       </Switch>
     </div>
-  </BrowserRouter>);
+  </BrowserRouter>
+  </Provider>);
 }
 
 export default App;

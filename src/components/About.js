@@ -9,11 +9,11 @@ function About(props) {
       The state in about component is:
       <span>{props.counter}</span>
     </div>
-    <button onClick = {()=> {console.log('the props are');console.log(props); props.addNumber();}} >Increase</button>
+    <button onClick = {props.addNumber} >Increase</button>
   </div>);
 }
 const mapStateToProps = (state) =>({
- counter: state.counter.counter
+ counter: state.counter
 });
 
 
