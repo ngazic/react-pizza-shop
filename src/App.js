@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "./components/Home";
 import About from "./components/About";
-import Header from "./components/Header/Header";
-import Menu from "./components/Menu";
+import Header from "./components/header/Header";
+import Menu from "./components/pizza-menu/Menu";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 function App() {

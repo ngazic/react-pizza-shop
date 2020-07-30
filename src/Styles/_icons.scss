@@ -21,11 +21,9 @@
 
 .pe-7s-close,
 .pe-7s-menu {
-
     position: relative;
     z-index: 10;
     transition: all 0.5s;
-
     &:hover {
         font-size: 50px;
     }
