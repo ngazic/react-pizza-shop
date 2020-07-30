@@ -1,10 +1,10 @@
 import {SET_PAGE_TITLE} from './types';
 
-export const setTitle = (payload) => {
+export const setTitle = (title,link) => {
   return (dispatch) => {
     dispatch({
       type: SET_PAGE_TITLE,
-      payload: payload
+      payload: {page:title,link:link}
     })
   }
 }

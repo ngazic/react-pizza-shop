@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 function Hero (props){
     return (
@@ -8,10 +9,11 @@ function Hero (props){
 							<div className="row">
 								<div className="col-12">
 									<div className="section__inner">
-										<h1 className="ui-title-page">{props.pageTitle}</h1>
+										<h1 className="ui-title-page">{props.pageTitle.page}</h1>
 										<ol className="breadcrumb">
-											<li><a href="home.html">Home</a></li>
-											<li className="active">Menu</li>
+											<li><Link to='/'>Home</Link></li>
+                      {(props.pageTitle.link) ? <li className="active">{props.pageTitle.link}</li> : null}
+											
 										</ol>
 									</div>
 								</div>

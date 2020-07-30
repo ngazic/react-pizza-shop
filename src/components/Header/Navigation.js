@@ -21,8 +21,8 @@ const pages = [
 ];
 
 function Navigation(props) {
-  const setTitle = (title) => {
-    props.setTitle(title);
+  const setTitle = (title,link) => {
+    props.setTitle(title,link);
     console.log(store.getState());
   }
   return (<div className="sb-slidebar sb-left sb-active">
@@ -31,7 +31,7 @@ function Navigation(props) {
         {
           pages.map(item => {
             return (<li key={item.page} className="navig-menu__item">
-              <Link  onClick={() => {props.closeNav();setTitle(item.page);}} className="navig-menu__link" to={item.link} >
+              <Link  onClick={() => {props.closeNav();setTitle(item.page,item.link);}} className="navig-menu__link" to={item.link} >
                 {item.page}
               </Link>
             </li>);
@@ -41,7 +41,7 @@ function Navigation(props) {
     </nav>
       <div className="border-bottom"></div>
       <li className="link-account">
-        <Link onClick={() => {props.closeNav();setTitle('Checkout');}} className="navig-menu__link" to="checkout">
+        <Link onClick={() => {props.closeNav();setTitle('Checkout','checkout');}} className="navig-menu__link" to="checkout">
           checkout
         </Link>
       </li>
