@@ -241,7 +241,7 @@ html.sb-static .sb-slidebar {
     }
 }
 
-@media (min-width: $desktop-large-min) {
+@media (min-width: $desktop-min) {
     /* Slidebar widths on large screens. */
     .sb-slidebar {
         width: 370px;
@@ -254,7 +254,7 @@ html.sb-static .sb-slidebar {
     }
 }
 
-@media (min-width: $desktop-large) {
+@media (min-width: $desktop-max) {
     /* Slidebar widths on extra large screens. */
     .sb-width-thin {
         width: 5%;
@@ -263,7 +263,7 @@ html.sb-static .sb-slidebar {
         width: 35%;
     }
 }
-@media (min-width: $desktop-large-max) {
+@media (min-width: $desktop-large) {
     /* Slidebar widths on extra large screens. */
     .sb-slidebar {
         left: calc(50vw - 960px);
