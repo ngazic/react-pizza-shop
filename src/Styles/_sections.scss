@@ -19,7 +19,6 @@
 
 .section-bg {
     position: relative;
-
     &:after {
         position: absolute;
         top: 0;
@@ -33,7 +32,6 @@
 .section-bg_mod-a {
     // background: url('../images/bg/bg-1.jpg') no-repeat 50% 0;
     background-size: cover;
-
     &:after {
         background-color: rgba(0, 0, 0, 0.25);
     }
@@ -42,7 +40,6 @@
 .section-bg_mod-b {
     // background: url('../images/bg/bg-2.jpg') no-repeat 50% 0;
     background-size: cover;
-
     &:after {
         background-color: rgba(0, 0, 0, 0.6);
     }
@@ -73,7 +70,6 @@
     margin-top: 5px;
     padding: 20px 35px;
     background-color: rgba(0, 0, 0, 0.3);
-
     .ui-title-inner {
         margin-bottom: 6px;
     }
@@ -99,8 +95,10 @@
 }
 
 .section-list-cart {
+    text-align: left;
     .ui-title-inner {
         margin-bottom: 0;
+        display: inline-block;
     }
 }
 

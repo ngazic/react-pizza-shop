@@ -162,9 +162,20 @@ html.sb-static .sb-slidebar {
         /* Makes Slidebars scroll naturally with the site, and unfixes them for Android Browser < 3 and iOS < 5. */
     }
     &.sb-active {
+        &.sb-left {
+            padding-top: 0;
+        }
         display: block;
         z-index: 1;
         /* Makes Slidebars visibile when open. Changed from visibility to display to allow -webkit-overflow-scrolling. */
+        .sb-toggle-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: transparent;
+            z-index: 100;
+            padding-top: 17px;
+        }
     }
 }
 
@@ -187,6 +198,15 @@ html.sb-static .sb-slidebar {
     height: 100%;
     background-color: #000;
     padding-top: 23px;
+}
+
+.sb-toggle-right {
+    float: right;
+    cursor: pointer;
+    color: #fefefe;
+    font-size: 40px;
+    // width: 90px;
+    height: 100%;
 }
 
 
@@ -216,7 +236,6 @@ html.sb-static .sb-slidebar {
 
 @media (min-width: $tablet-min) {
     /* Slidebar widths on small screens. */
-    
     .sb-width-thin {
         width: 40%;
     }
@@ -263,8 +282,11 @@ html.sb-static .sb-slidebar {
 
 @media (min-width: $desktop-large) {
     /* Slidebar widths on extra large screens. */
-    .sb-slidebar {
+    .sb-left {
         left: calc(50vw - 970px);
+    }
+    .sb-right {
+        right: calc(50vw - 970px);
     }
 }
 
