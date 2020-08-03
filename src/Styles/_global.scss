@@ -1041,6 +1041,7 @@ h3.h3-inner {
     width: 20px;
     height: 20px;
     opacity: 0.3;
+    transition: all 0.3s;
     &:hover {
         opacity: 1;
     }
