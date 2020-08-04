@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {setTitle} from "../../actions/pageActions";
 import {connect} from "react-redux"
-import store from '../../store';
 
 const pages = [
   {
@@ -23,10 +22,9 @@ const pages = [
 function Navigation(props) {
   const setTitle = (title,link) => {
     props.setTitle(title,link);
-    console.log(store.getState());
   }
   return (<div className="sb-slidebar sb-left sb-active">
-    <span class="sb-toggle-left" onClick={props.closeCart}><i class="icon pe-7s-close" onClick={props.closeNav}></i></span>
+    <span className="sb-toggle-left" onClick={props.closeCart}><i className="icon pe-7s-close" onClick={props.closeNav}></i></span>
     <nav className="main-nav">
       <ul className="navig-menu list-unstyled">
         {

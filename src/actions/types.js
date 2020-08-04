@@ -9,3 +9,12 @@ export const SUBSTRACT_NUMBER = 'SUBSTRACT_NUMBER';
  */
 
  export const SET_PAGE_TITLE = "SET_PAGE_TITLE";
+
+
+ 
+/**
+ ============================
+ CART ACTIONS
+ ============================
+ */
+export const ADD_TO_CART = "ADD_TO_CART";

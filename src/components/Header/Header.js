@@ -3,9 +3,10 @@ import logo from "../../images/logo.png";
 import Navigation from "./Navigation";
 import Cart from "./Cart";
 import {Link} from "react-router-dom";
+import { connect } from "react-redux";
 
 
-export default class Header extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     // Don't call this.setState() here!
@@ -38,9 +39,7 @@ export default class Header extends Component {
         this.setState({ showNavigation: false});
       }
     }
-    console.log('close nav is called');
-    console.log(state)
-    console.log(this)
+    
     this.setState({state: false});
   }
   render() {
@@ -54,7 +53,7 @@ export default class Header extends Component {
         </Link>
         <span className="header-basket" onClick={()=>{this.cartBtn();this.closeNav();}}>
           <i className="icon pe-7s-cart"></i>
-          <span className="header-basket__number">2</span>
+  <span className="header-basket__number">{this.props.cart}</span>
         </span>
       </div>
         {
@@ -70,3 +69,9 @@ export default class Header extends Component {
     </header>);
   }
 }
+
+const mapStateToProps = (state) => ({
+  cart: state.cart.count
+})
+
+export default connect(mapStateToProps,null)(Header);
