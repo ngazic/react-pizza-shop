@@ -1,10 +1,19 @@
-import {ADD_TO_CART} from '../actions/types';
+import {ADD_TO_CART, REMOVE_FROM_CART} from '../actions/types';
 
 const initialState = {
   count: 0
 };
 
 export default function(state=initialState, action) {
+  function removePizzaFromCart(payload,oldState) {
+    const removedCount = oldState[payload.title][payload.size].count;
+    delete oldState[payload.title][payload.size];
+    if(Object.keys(oldState[payload.title]).length === 1) {
+      delete oldState[payload.title];
+    }
+    oldState.count -= removedCount;
+    return oldState;
+    }
   function addPizzaToCart(payload,oldState) {
     let newPizza = {};
     newPizza[payload.title] = {};
@@ -31,10 +40,14 @@ export default function(state=initialState, action) {
     }
   switch(action.type) {
     case ADD_TO_CART: {
-      console.log('add to cart actions is called');
-      console.log(action);
-      console.log(state)
       let newState = {...state,count: state.count+1, ...addPizzaToCart(action.payload, state)}
+      return newState;
+    }
+    case REMOVE_FROM_CART: {
+      console.log('remove from cart actions is called');
+      console.log(action.payload);
+      console.log(state)
+      let newState = {...removePizzaFromCart(action.payload, state)}
       console.log(newState)
       return newState;
     }
