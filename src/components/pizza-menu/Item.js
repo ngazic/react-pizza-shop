@@ -9,8 +9,9 @@ class Item extends Component {
 constructor(props) {
   super(props);
   this.state = {
-      pizzaImg: `../../images/list-catalog/${this.props.img}.png`,
+      pizzaImg: this.props.img,
       price: this.props.price.Small,
+      size: "Small",
       pizzaSizes :[
       {
         value: this.props.price.Small,
@@ -32,8 +33,10 @@ constructor(props) {
     }
   }
    onChange = (event)=> {
+     console.log(event)
     this.setState({
-      price: event.value
+      price: event.value,
+      size: event.label
     })
   }
 
@@ -52,7 +55,7 @@ constructor(props) {
               </div>
               <div className="pizza-builder__controls-wrapper">
               <Select options={this.state.pizzaSizes} className="item-select" classNamePrefix="item-select" isSearchable={false} defaultValue={this.state.pizzaSizes[0]} onChange={this.onChange}/>
-              <button className="pizza-builder__btn-select ui-btn ui-btn-primary btn-effect"onClick={()=>this.props.add(this.state)} >
+              <button className="pizza-builder__btn-select ui-btn ui-btn-primary btn-effect"onClick={()=>this.props.add({title: this.props.title, size: this.state.size, price: this.state.price, image: this.state.pizzaImg})} >
                 add
               </button>
               </div>
