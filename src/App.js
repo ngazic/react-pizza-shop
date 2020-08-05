@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Header from "./components/header/Header";
 import Menu from "./components/pizza-menu/Menu";
+import Footer from "./components/Foooter";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import { Provider } from "react-redux";
 import store from  "./store";
@@ -26,6 +27,7 @@ function App() {
           <Menu/>
         </Route>
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>
   </Provider>);

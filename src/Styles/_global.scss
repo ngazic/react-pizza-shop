@@ -23,6 +23,12 @@ body {
         margin-bottom: 30px;
         line-height: 1.66;
     }
+    a {
+        &:hover,
+        &:active {
+            color: #9c361c
+        }
+    }
 }
 
 select:focus {
@@ -348,14 +354,16 @@ h3.h3-inner {
 }
 
 // .decor-1 {
-//     background: url('../media/decor/decor-1.png') no-repeat 50% 0;
+//     background: url('../images/decor/decor-1.png') no-repeat 50% 0;
 // }
-// .decor-2 {
-//     height: 50px;
-//     padding-top: 9px;
-//     font: 24px 'Fredericka the Great';
-//     background: url('../media/decor/decor-2.png') no-repeat 50% 0;
-// }
+.decor-2 {
+    color: #fff;
+    height: 50px;
+    padding-top: 9px;
+    font: 24px 'Fredericka the Great';
+    background: url('../images/decor/decor-2.png') no-repeat 50% 0;
+}
+
 .section-typografy {
     padding-top: 50px;
     padding-bottom: 45px;
