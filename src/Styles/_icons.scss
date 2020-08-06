@@ -26,6 +26,12 @@
     transition: all 0.5s;
 }
 
+.pe-7s-menu {
+    &:hover {
+        color: #fdbc2c;
+    }
+}
+
 .pe-7s-close {
     z-index: 10;
     &:hover {
@@ -839,4 +845,42 @@
 
 .pe-7s-airplay:before {
     content: "\e67f";
+}
+
+.plus,
+.minus {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 23px;
+    font: 23px/1 'Fredericka the Great', fantasy;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #343a40;
+    opacity: 0.3;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.75;
+        background-color: #9c361c;
+    }
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.minus {
+    &::after {
+        content: '-';
+    }
+}
+
+.plus {
+    &::after {
+        content: '+';
+    }
 }

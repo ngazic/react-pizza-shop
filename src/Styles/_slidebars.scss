@@ -166,7 +166,7 @@ html.sb-static .sb-slidebar {
             padding-top: 0;
         }
         display: block;
-        z-index: 1;
+        z-index: 100;
         /* Makes Slidebars visibile when open. Changed from visibility to display to allow -webkit-overflow-scrolling. */
         .sb-toggle-left {
             position: absolute;

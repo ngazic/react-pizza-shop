@@ -1,10 +1,22 @@
-import {ADD_TO_CART, REMOVE_FROM_CART} from '../actions/types';
+import {ADD_TO_CART, REMOVE_FROM_CART, INCREASE_QUANTITY, DECREASE_QUANTITY} from '../actions/types';
 
 const initialState = {
   count: 0
 };
 
 export default function(state=initialState, action) {
+  function decreasePizzaQuantity(payload,oldState) {
+    if(oldState[payload.title][payload.size].count > 1) {
+      oldState[payload.title][payload.size].count -= 1;
+      oldState.count -= 1;
+    }
+    return oldState;
+  }
+  function increasePizzaQuantity(payload,oldState) {
+    oldState[payload.title][payload.size].count += 1;
+    oldState.count += 1;
+    return oldState;
+  }
   function removePizzaFromCart(payload,oldState) {
     const removedCount = oldState[payload.title][payload.size].count;
     delete oldState[payload.title][payload.size];
@@ -44,11 +56,15 @@ export default function(state=initialState, action) {
       return newState;
     }
     case REMOVE_FROM_CART: {
-      console.log('remove from cart actions is called');
-      console.log(action.payload);
-      console.log(state)
       let newState = {...removePizzaFromCart(action.payload, state)}
-      console.log(newState)
+      return newState;
+    }
+    case INCREASE_QUANTITY: {
+      let newState = {...increasePizzaQuantity(action.payload, state)}
+      return newState;
+    }
+    case DECREASE_QUANTITY: {
+      let newState = {...decreasePizzaQuantity(action.payload, state)}
       return newState;
     }
     default: {

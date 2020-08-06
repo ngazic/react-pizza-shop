@@ -555,25 +555,54 @@ h3.h3-inner {
     width: 90px;
     height: 100%;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-width: 2px;
+    border-style: solid;
+    transition: all 0.3s ease 0.2s;
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        height: 50%;
+        opacity: 0;
+        z-index: -1;
+        content: '';
+        transition: all 0.5s ease 0.2s;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+    &:hover {
+        border-color: #fdbc2c;
+        &::after {
+            height: 150%;
+            opacity: 1;
+            background: #D94F2B;
+            z-index: 1;
+        }
+    }
     .icon {
         display: block;
         padding-top: 26px;
         font-size: 40px;
+        position: relative;
         color: #fefefe;
+        z-index: 2;
     }
 }
 
 .header-basket__number {
     position: absolute;
-    top: 29px;
+    top: 25px;
     right: 22px;
     display: block;
-    width: 18px;
-    height: 18px;
-    font: 700 12px 'Josefin Sans';
+    width: 23px;
+    height: 23px;
+    font: 700 14px/23px 'Josefin Sans';
     color: #151515;
     border-radius: 50%;
     background-color: #fff;
+    z-index: 2;
 }
 
 .header__wrap {
@@ -1036,8 +1065,13 @@ h3.h3-inner {
     text-transform: uppercase;
 }
 
-.list-cart__price {
+.list-cart__price-wrapper {
     margin-top: 12px;
+    text-align: center;
+}
+
+.list-cart__price {
+    display: inline-block;
 }
 
 .list-cart__icon {
