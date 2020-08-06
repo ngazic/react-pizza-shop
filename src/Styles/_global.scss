@@ -668,10 +668,11 @@ h3.h3-inner {
 }
 
 .navig-menu__link {
-    font-weight: 700;
+    // font-weight: 700;
     color: #fefefe;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
     &:hover {
         font-weight: 700;
         text-decoration: none;

@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {removeItemFromCart, increaseQuantity, decreaseQuantity} from '../../actions/cartActions';
 
-
 function CartItem(props) {
+	
   return (
     <li className="list-cart__item">
               <i className="list-cart__icon close" onClick={()=>props.remove({title: props.pizza.title, size: props.pizza.size})}></i>
@@ -16,7 +16,7 @@ function CartItem(props) {
                 <div className="list-cart__price">
                   <span className="color_primary">{props.pizza.count} x</span> ${props.pizza.price}
                 </div>
-                <span class="plus" onClick={()=>props.increase({title: props.pizza.title, size: props.pizza.size})}></span>
+                <span class="plus" onClick={()=>{props.increase({title: props.pizza.title, size: props.pizza.size});}}></span>
                 </div>
 							</div>
 						</li>

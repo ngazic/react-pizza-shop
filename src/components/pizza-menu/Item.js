@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Select from "react-select";
 import {connect} from 'react-redux';
 import {addItemToCart} from '../../actions/cartActions';
+import {eventBus} from "../../eventBus";
 
 
 class Item extends Component {
@@ -32,6 +33,9 @@ constructor(props) {
     ]
     }
   }
+  animateCart = ()=> {
+    eventBus.dispatch('animateCart');
+  }
    onChange = (event)=> {
      console.log(event)
     this.setState({
@@ -55,7 +59,7 @@ constructor(props) {
               </div>
               <div className="pizza-builder__controls-wrapper">
               <Select options={this.state.pizzaSizes} className="item-select" classNamePrefix="item-select" isSearchable={false} defaultValue={this.state.pizzaSizes[0]} onChange={this.onChange}/>
-              <button className="pizza-builder__btn-select ui-btn ui-btn-primary btn-effect"onClick={()=>this.props.add({title: this.props.title, size: this.state.size, price: this.state.price, image: this.state.pizzaImg})} >
+              <button className="pizza-builder__btn-select ui-btn ui-btn-primary btn-effect"onClick={()=>{this.props.add({title: this.props.title, size: this.state.size, price: this.state.price, image: this.state.pizzaImg}); this.animateCart();}} >
                 add
               </button>
               </div>

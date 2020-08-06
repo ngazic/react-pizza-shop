@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import Cart from "./Cart";
 import {Link} from "react-router-dom";
 import { connect } from "react-redux";
+import {eventBus} from "../../eventBus";
 
 
 class Header extends Component {
@@ -18,6 +19,23 @@ class Header extends Component {
     this.burgerBtn = this.burgerBtn.bind(this);
     this.closeNav = this.closeNav.bind(this);
     this.cartBtn = this.cartBtn.bind(this);
+    this.animateCart = this.animateCart.bind(this);
+  }
+  componentDidMount() {
+    eventBus.on('animateCart', this.animateCart);
+  }
+  componentWillUnmount() {
+    eventBus.remove('animateCart',this.animateCart)
+  }
+  animateCart() {
+    this.setState({
+      animate: true
+    })
+    setTimeout(()=>{
+      this.setState({
+        animate: false
+      })
+    },600)
   }
   burgerBtn() {
     this.setState({
@@ -52,8 +70,8 @@ class Header extends Component {
           <img className="img-responsive" src={logo} alt="Logo"/>
         </Link>
         <span className="header-basket" onClick={()=>{this.cartBtn();this.closeNav();}}>
-          <i className="icon pe-7s-cart"></i>
-  <span className="header-basket__number">{this.props.cart}</span>
+          <i className={`icon pe-7s-cart ${(this.state.animate) ? 'cart-run':''}`}></i>
+  <span className={`header-basket__number ${(this.state.animate) ? 'rotate':''}`}>{this.props.cart}</span>
         </span>
       </div>
         {
