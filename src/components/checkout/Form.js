@@ -4,7 +4,8 @@ import Select from 'react-select';
 function Form(props) {
   const selectOptions = [
     {label: 'Bosnia and Herzegovina', value: 'BH'},
-    {label: 'US', value: 'US'},
+    {label: 'US- America', value: 'US'},
+    {label: 'UK- United Kingdom', value: 'UK'},
     {label: 'Germany', value: 'DE'}
   ]
   console.log('form =============================')
@@ -13,13 +14,8 @@ function Form(props) {
       <section className="section-area">
         <h2 className="ui-title-inner ui-title-inner_mod-a">Billing Details</h2>
         <label className="ui-form-label">COUNTRY *</label>
-        <select className="selectpicker bs-select-hidden" data-style="ui-select ui-select_mod-a" data-width="100%">
-          <option>United Kingdom (UK)</option>
-          <option>United Kingdom (UK)-2</option>
-          <option>United Kingdom (UK)-3</option>
-        </select>
-        <Select options={selectOptions} className="item-select" classNamePrefix="item-select" isSearchable={false} defaultValue={selectOptions[0]} />
-        <div className="btn-group bootstrap-select" style={{width: '100%'}}><button type="button" className="btn dropdown-toggle ui-select ui-select_mod-a" data-toggle="dropdown" title="United Kingdom (UK)" aria-expanded="false"><span className="filter-option pull-left">United Kingdom (UK)</span>&nbsp;<span className="ui-select__icon"></span></button><div className="dropdown-menu open"><ul className="dropdown-menu inner" role="menu"><li data-original-index="0" className="selected"><a tabindex="0" data-tokens="null"><span className="text">United Kingdom (UK)</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1" className=""><a tabindex="0" data-tokens="null"><span className="text">United Kingdom (UK)-2</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2" className=""><a tabindex="0" data-tokens="null"><span className="text">United Kingdom (UK)-3</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+        <Select options={selectOptions} className="form-select" classNamePrefix="form-select" isSearchable={false} defaultValue={selectOptions[0]} />
+       
         <div className="row">
           <div className="col-md-6">
             <label className="ui-form-label">FIRST NAME *</label>
