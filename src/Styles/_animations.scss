@@ -1,57 +1,50 @@
 .cart-run {
-  -moz-animation: cart-run 0.5s;
-  -webkit-animation: cart-run 0.5s;
-  animation: cart-run 0.5s;
-}
-.rotate {
-  -moz-animation: rotate 0.5s;
-  -webkit-animation: rotate 0.5s;
-  animation: rotate 0.5s;
+    -moz-animation: cart-run 0.5s;
+    -webkit-animation: cart-run 0.5s;
+    animation: cart-run 0.5s;
 }
 
+.bump {
+    -moz-animation: bump 0.5s;
+    -webkit-animation: bump 0.5s;
+    animation: bump 0.5s;
+}
 
 @keyframes cart-run {
-  0% {
-    left: 0;
-  }
-
-  45% {
-    left: 50px;
-    opacity: 0;
-  }
-
-  50% {
-    left: -50px;
-    opacity: 0;
-  }
-
-  55% {
-    left: -50px;
-    opacity: 1;
-  }
-
-  100% {
-    left: 0;
-  }
+    0% {
+        left: 0;
+    }
+    45% {
+        left: 50px;
+        opacity: 0;
+    }
+    50% {
+        left: -50px;
+        opacity: 0;
+    }
+    55% {
+        left: -50px;
+        opacity: 1;
+    }
+    100% {
+        left: 0;
+    }
 }
 
-@keyframes rotate {
-  0%{
-    transform: rotate(0deg) scale(1.1);
-    background-color: #fff;
-    opacity: 0.8;
-    
-  }
-  50%{
-    transform: rotate(1800deg) scale(2);
-    background-color: #fdbc2c;
-    opacity: 0.3;
-    
-  }
-  
-  100% {
-    transform: rotate(360deg)scale(1.1);
-    background-color: #fff;
-    opacity: 0.8;
-  }
+@keyframes bump {
+    0% {
+        transform: scale(1.1);
+        background-color: #fff;
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(2);
+        background-color: #fdbc2c;
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.1);
+        background-color: #fff;
+        opacity: 0.8;
+    }
 }

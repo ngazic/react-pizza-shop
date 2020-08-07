@@ -71,7 +71,7 @@ class Header extends Component {
         </Link>
         <span className="header-basket" onClick={()=>{this.cartBtn();this.closeNav();}}>
           <i className={`icon pe-7s-cart ${(this.state.animate) ? 'cart-run':''}`}></i>
-  <span className={`header-basket__number ${(this.state.animate) ? 'rotate':''}`}>{this.props.cart}</span>
+  <span className={`header-basket__number ${(this.state.animate) ? 'bump':''}`}>{this.props.cart}</span>
         </span>
       </div>
         {
