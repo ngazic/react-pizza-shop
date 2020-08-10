@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
 import Form from './Form';
-import Order from './Order';
+import Payment from './Payment';
+import React, { Component } from 'react';
 
 class Checkout extends Component {
   render() {
@@ -15,7 +15,7 @@ class Checkout extends Component {
 								<Form />
 							</div>
 							<div className="col-md-4">
-								<Order />
+								<Payment />
 							</div>
 						</div>
 					</div>

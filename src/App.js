@@ -9,6 +9,7 @@ import Header from "./components/header/Header";
 import Menu from "./components/pizza-menu/Menu";
 import Checkout from "./components/checkout/Checkout";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import ShoppingCart from "./components/shopping-cart/ShoppingCart";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/checkout" >
           <Checkout/>
+        </Route>
+        <Route path="/shopping-cart" >
+          <ShoppingCart />
         </Route>
       </Switch>
       <Footer />

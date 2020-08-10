@@ -20,4 +20,5 @@ npm start
 
 ```
 npm i react-select # For custom select elements
+npm install prettier -D --save-exact # VS code formetter 
 ```

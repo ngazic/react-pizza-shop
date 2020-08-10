@@ -38,7 +38,7 @@ function Navigation(props) {
         }
       </ul>
     </nav>
-      <div className="border-bottom"></div>
+      <div className="border-bttm"></div>
       <li className="link-account">
         <Link onClick={() => {props.closeNav();setTitle('Checkout','checkout');}} className="navig-menu__link" to="checkout">
           checkout
