@@ -14,7 +14,7 @@ function Form(props) {
       <section className="section-area">
         <h2 className="ui-title-inner ui-title-inner_mod-a">Billing Details</h2>
         <label className="ui-form-label">COUNTRY *</label>
-        <Select options={selectOptions} className="form-select" classNamePrefix="form-select" isSearchable={false} defaultValue={selectOptions[0]} />
+        <Select options={selectOptions} className="form-select" classNamePrefix="form-select" isSearchable={false}  />
        
         <div className="row">
           <div className="col-md-6">

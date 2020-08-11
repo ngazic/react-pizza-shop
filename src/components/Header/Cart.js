@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CartItem from "./CartItem";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import bodyScrollLock from "../../scrollLock";
 
 export function extractCartItems(allItems) {
   let cartItems = [];
@@ -25,6 +26,10 @@ export function extractCartItems(allItems) {
 }
 
 function Cart(props) {
+  useEffect(() => {
+    bodyScrollLock.disableBodyScroll();
+    return () => bodyScrollLock.enableBodyScrolling();
+  }, []);
   let cartItems = extractCartItems(props.items);
   return (
     <div className="sb-slidebar sb-right sb-active">
@@ -43,12 +48,17 @@ function Cart(props) {
           <span className="total-price__number">${props.items.total}</span>
         </div>
         <Link
+          onClick={props.closeCart}
           to="shopping-cart"
           className="total-price__btn ui-btn ui-btn_mod-a btn-effect btn-block"
         >
           view shopping cart
         </Link>
-        <Link to="checkout" className="total-price__btn ui-btn ui-btn-primary btn-effect btn-block">
+        <Link
+          to="checkout"
+          className="total-price__btn ui-btn ui-btn-primary btn-effect btn-block"
+          onClick={props.closeCart}
+        >
           checkout
         </Link>
       </section>

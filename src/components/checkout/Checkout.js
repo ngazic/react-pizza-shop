@@ -9,7 +9,7 @@ class Checkout extends Component {
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
-								<div class="checkout-top-line">Returning customer? <a class="checkout-top-line__link" href="javascript:void(0);">Click here to login</a></div>
+								<div class="checkout-top-line">Returning customer? <a class="checkout-top-line__link" href="#">Click here to login</a></div>
 							</div>
 							<div class="col-md-8">
 								<Form />

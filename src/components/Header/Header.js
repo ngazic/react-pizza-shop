@@ -11,7 +11,6 @@ class Header extends Component {
     super(props);
     // Don't call this.setState() here!
     this.state = {
-      counter: 0,
       showNavigation: false,
       showCart: false,
     };

@@ -1699,6 +1699,9 @@ h3.h3-inner {
 	.pizza-builder__btn-select {
 		display: inline-block;
 		opacity: 0;
+		@media (max-width: 767px) {
+			opacity: 1;
+		}
 	}
 
 	.pizza-builder__check-price {
@@ -2072,6 +2075,7 @@ h3.h3-inner {
 
 		&__price-wrapper {
 			display: inline-block;
+
 			&>div {
 				min-width: 140px;
 				margin-bottom: 10px;
@@ -2249,6 +2253,8 @@ h3.h3-inner {
 		opacity: 0;
 		transition: all 0.3s;
 
+
+
 		.item-select {
 			&__single-value {
 				color: white;
@@ -2276,6 +2282,10 @@ h3.h3-inner {
 					border-color: transparent;
 				}
 			}
+		}
+
+		@media (max-width: 767px) {
+			opacity: 1;
 		}
 	}
 }
