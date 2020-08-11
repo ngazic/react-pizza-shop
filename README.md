@@ -15,6 +15,10 @@ This simple demonstration app contains:
 npm install
 npm start
 ```
+### Serving 
+```
+serve -s build
+```
 
 
 ### Third party libraries

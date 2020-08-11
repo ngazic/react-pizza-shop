@@ -14,10 +14,6 @@ const pages = [
     link: "menu",
   },
   {
-    page: "about us",
-    link: "about-us",
-  },
-  {
     page: "contact",
     link: "contact",
   },

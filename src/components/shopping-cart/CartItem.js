@@ -36,7 +36,7 @@ export const CartItem = (props) => {
         <div className="list-cart__price-wrapper d-flex justify-content-between flex-wrap">
           <div className=" d-inline-flex flex-grow-1 justify-content-between ">
             <span
-              class="minus"
+              className="minus"
               onClick={() =>
                 props.decrease({
                   title: props.pizza.title,
@@ -51,7 +51,7 @@ export const CartItem = (props) => {
               </h5>
             </div>
             <span
-              class="plus"
+              className="plus"
               onClick={() => {
                 props.increase({
                   title: props.pizza.title,

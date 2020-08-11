@@ -8,7 +8,6 @@ function Form(props) {
     {label: 'UK- United Kingdom', value: 'UK'},
     {label: 'Germany', value: 'DE'}
   ]
-  console.log('form =============================')
   return (
     <form className="form-details">
       <section className="section-area">

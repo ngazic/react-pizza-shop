@@ -39,7 +39,6 @@ class Item extends Component {
     eventBus.dispatch("animateCart");
   };
   onChange = (event) => {
-    console.log(event);
     this.setState({
       price: event.value,
       size: event.label,

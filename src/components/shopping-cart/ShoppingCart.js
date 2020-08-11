@@ -7,11 +7,11 @@ import { extractCartItems } from "../header/Cart";
 export const ShoppingCart = (props) => {
   let cartItems = extractCartItems(props.items);
   return (
-    <section class="section_mod-d">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="shopping-cart">
+    <section className="section_mod-d">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8">
+            <div className="shopping-cart">
               <ul className="list-cart list-unstyled">
                 {cartItems.map((item, key) => {
                   return <CartItem pizza={item} key={key} />;
@@ -21,33 +21,33 @@ export const ShoppingCart = (props) => {
 
             </div>
 
-          <div class="col-md-4">
-            <section class="section-table-order">
-              <h2 class="table-totals__title ui-title-inner">Cart Totals</h2>
-              <table class="table-totals">
+          <div className="col-md-4">
+            <section className="section-table-order">
+              <h2 className="table-totals__title ui-title-inner">Cart Totals</h2>
+              <table className="table-totals">
                 <tbody>
                   <tr>
                     <td>
                       <b>CART SUBTOTAL</b>
                     </td>
-                    <td class="text-right">${props.items.total}</td>
+                    <td className="text-right">${props.items.total}</td>
                   </tr>
                   <tr>
-                    <td class="border-cell">
+                    <td className="border-cell">
                       <b>SHIPPING AND HANDLING</b>
                     </td>
-                    <td class="border-cell text-right">Free Shipping</td>
+                    <td className="border-cell text-right">Free Shipping</td>
                   </tr>
                   <tr>
-                    <td class="table-totals__total">Order Total</td>
-                    <td class="table-totals__total">${props.items.total}</td>
+                    <td className="table-totals__total">Order Total</td>
+                    <td className="table-totals__total">${props.items.total}</td>
                   </tr>
                 </tbody>
               </table>
 
               <Link
                 to="checkout"
-                class="table-totals__btn ui-btn ui-btn-primary btn-effect"
+                className="table-totals__btn ui-btn ui-btn-primary btn-effect"
               >
                 proceed to checkout
               </Link>

@@ -1,7 +1,6 @@
 import store from "./store";
 import Home from "./components/Home";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import { Provider } from "react-redux";
 import React, { useEffect } from "react";
 import Footer from "./components/Foooter";
@@ -28,9 +27,6 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
-            </Route>
-            <Route path="/about-us">
-              <About />
             </Route>
             <Route path="/menu">
               <Menu />
