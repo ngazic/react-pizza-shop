@@ -20,7 +20,7 @@ npm start
 serve -s build
 ```
 ### Live version 
-[LINK]([https://link](https://react-pizza.netlify.app))
+[LINK](https://react-pizza.netlify.app)
 
 ### Third party libraries
 

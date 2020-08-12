@@ -1,9 +1,10 @@
 import React from "react";
-import pizzas from "../../dummy-data";
+import {getData} from "../../dummy-data";
 import { Link } from "react-router-dom";
-import dummyData from "../../dummy-data";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+const pizzas = getData();
 
 const HomeCarousel = () => {
   return (
@@ -29,7 +30,7 @@ const HomeCarousel = () => {
                 <div class="slider-type-a__img">
                   <img
                     class="img-fluid"
-                    src={require(`../../assets/images/list-catalog/${dummyData[pizza].image}.png`)}
+                    src={require(`../../assets/images/list-catalog/${pizzas[pizza].image}.png`)}
                     height="617"
                     width="618"
                     alt="Foto"
@@ -38,11 +39,11 @@ const HomeCarousel = () => {
                 <div class="slider-type-a__inner">
                   <div class="slider-type-a__name">{pizza}</div>
                   <div class="slider-type-a__price">
-                    ${dummyData[pizza].price.Small} - $
-                    {dummyData[pizza].price.Party}
+                    ${pizzas[pizza].price.Small} - $
+                    {pizzas[pizza].price.Party}
                   </div>
                   <div class="slider-type-a__description">
-                    {dummyData[pizza].text}
+                    {pizzas[pizza].text}
                   </div>
                   <Link
                     to="menu"

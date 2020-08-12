@@ -1,4 +1,4 @@
-export default {
+const data = {
   'Kimchi BBQ Chicken': {
     text: 'Slow Cooked Pulled Chicken marinated in Bulgogi sauce, Shitake Mushrooms, Shallots on a Garlic base, Garnished with Kimchi, Red & Green Chilli',
     image: '1',
@@ -164,4 +164,10 @@ export default {
       Party: 21
    }
   },
+}
+
+export default data;
+
+export function getData() {
+  return data;
 }
