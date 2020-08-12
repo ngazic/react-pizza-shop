@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Select from "react-select";
 import { connect } from "react-redux";
-import { addItemToCart } from "../../actions/cartActions";
+import { addItemToCart } from "../../store/actions/cartActions";
 import { eventBus } from "../../eventBus";
 
 class Item extends Component {
@@ -51,7 +51,7 @@ class Item extends Component {
         <div className="pizza-builder__check-img pizza-builder__check-img pizza-builder__check-img_mod-a">
           <img
             className="img-fluid"
-            src={require(`../../images/list-catalog/${this.props.img}.png`)}
+            src={require(`../../assets/images/list-catalog/${this.props.img}.png`)}
             height="258"
             width="258"
             alt="Foto"

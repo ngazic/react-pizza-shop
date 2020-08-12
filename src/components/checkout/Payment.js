@@ -1,7 +1,7 @@
 import React from 'react';
 import Order from './Order';
 
-const payPalImg = require('../../images/payment/1.png');
+const payPalImg = require('../../assets/images/payment/1.png');
 
 export default function Payment() {
   return (

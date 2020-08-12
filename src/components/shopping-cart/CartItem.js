@@ -4,7 +4,7 @@ import {
   removeItemFromCart,
   increaseQuantity,
   decreaseQuantity,
-} from "../../actions/cartActions";
+} from "../../store/actions/cartActions";
 
 export const CartItem = (props) => {
   return (
@@ -22,7 +22,7 @@ export const CartItem = (props) => {
       <div className="list-cart__img flex-grow-1">
         <img
           className="img-responsive"
-          src={require(`../../images/list-catalog/${props.pizza.image}.png`)}
+          src={require(`../../assets/images/list-catalog/${props.pizza.image}.png`)}
           height="87"
           width="87"
           alt="Foto"

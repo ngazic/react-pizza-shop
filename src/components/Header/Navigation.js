@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
 import bodyScrollLock from "../../scrollLock";
-import { setTitle } from "../../actions/pageActions";
+import { setTitle } from "../../store/actions/pageActions";
 
 const pages = [
   {
