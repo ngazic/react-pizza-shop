@@ -19,7 +19,8 @@ npm start
 ```
 serve -s build
 ```
-
+### Live version 
+[LINK]([https://link](https://react-pizza.netlify.app/shopping-cart))
 
 ### Third party libraries
 
