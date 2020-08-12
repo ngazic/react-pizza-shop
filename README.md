@@ -20,7 +20,7 @@ npm start
 serve -s build
 ```
 ### Live version 
-[LINK]([https://link](https://react-pizza.netlify.app/shopping-cart))
+[LINK]([https://link](https://react-pizza.netlify.app))
 
 ### Third party libraries
 
@@ -28,6 +28,7 @@ serve -s build
 npm i react-select # For custom select elements
 npm install prettier -D --save-exact # VS code formetter 
 npm install body-scroll-lock # for preventing scrooling of elements
+npm i react-responsive-carousel # Simple react carousel component
 ```
 
 ## TODOS / Project ideas:

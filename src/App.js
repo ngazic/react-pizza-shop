@@ -1,5 +1,5 @@
 import store from "./store/store";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Hero from "./components/Hero";
 import { Provider } from "react-redux";
 import React, { useEffect } from "react";
